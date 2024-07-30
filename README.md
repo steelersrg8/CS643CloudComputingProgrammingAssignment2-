@@ -1,20 +1,24 @@
 CS 643, Cloud Computing - Programming Assignment 2
+
 Goal: The purpose of this individual assignment is to learn how to develop parallel machine learning (ML)
 applications in Amazon AWS cloud platform. Specifically, you will learn: (1) how to use Apache Spark to
 train an ML model in parallel on multiple EC2 instances; (2) how to use Spark’s MLlib to develop and use
 an ML model in the cloud; (3) How to use Docker to create a container for your ML model to simplify
 model deployment.
+
 Description: You have to build a wine quality prediction ML model in Spark over AWS. The model must
 be trained in parallel on multiple EC2 instances. Then, you need to save and load the model in an application
 that will perform wine quality prediction; this application will run on one EC2 instance. The assignment
-must be implemented in Java, Scala, or Python on Ubuntu Linux. The details of the assignment are
+must be implemented in Java, Scala, or Python on Ubuntu Linux. 
+
+The details of the assignment are
 presented below:
 • Input for model training: we share 2 datasets with you for your ML model. Each row in a dataset is
 for one specific wine, and it contains some physical parameters of the wine as well as a quality
 score. Both datasets are available in Canvas, under Programming Assignment 2.
-o TrainingDataset.csv: you will use this dataset to train the model in parallel on multiple EC2
+  o TrainingDataset.csv: you will use this dataset to train the model in parallel on multiple EC2
 instances.
-o ValidationDataset.csv: you will use this dataset to validate the model and optimize its
+  o ValidationDataset.csv: you will use this dataset to validate the model and optimize its
 performance (i.e., select the best values for the model parameters).
 • Input for prediction testing: Your prediction program should take the pathname to the test file as
 a command line parameter. The pathname contains both the directory location and the filename
@@ -46,7 +50,10 @@ for the prediction application.
 This file must also describe step-by-step how to set-up the cloud environment and run the model training
 and the application prediction. For the application prediction, you should provide instructions on how to
 run it with and without Docker.
+
 Grading:
 - Parallel training implementation – 50 points
 - Single machine prediction application – 25 points
-- Docker container for prediction application – 25 points 
+- Docker container for prediction application – 25 points
+
+https://hub.docker.com/r/steelersrg8/cs643cloudcomputingprogrammingassignment2
